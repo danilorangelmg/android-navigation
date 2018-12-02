@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">kotlin-architecture-nav</string>
+    <string name="fragment_home_message">I am home</string>
+    <string name="fragment_detail_message">I am Detail</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
