@@ -1,27 +1,16 @@
 package br.com.example.kotlin_architecture_nav.ui
 
-import android.os.Bundle
-import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.Navigation
-import androidx.navigation.ui.NavigationUI
 import br.com.example.kotlin_architecture_nav.R
+import br.com.example.kotlin_architecture_nav.ui.base.BaseActivy
 
-class MainNavigationActivity : AppCompatActivity() {
+class MainNavigationActivity : BaseActivy() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_navigation_activity)
-
-        val drawerNavController = Navigation.findNavController(this, R.id.nav_host)
-//        NavigationUI.setupWithNavController(navView, drawerNavController)
-        drawerNavController.addOnNavigatedListener { controller, destination ->
-            // Update UI visibility and other events
-            Log.i("NAVIGATION", destination.toString())
-        }
+    override fun getNavigationHost(): Int {
+        return R.id.nav_host
     }
 
-    override fun onSupportNavigateUp(): Boolean {// Up button will work on this method
-        return Navigation.findNavController(this, R.id.nav_host).navigateUp()
+    override fun getLayoutResource(): Int {
+        return R.layout.main_navigation_activity
     }
+
 }
