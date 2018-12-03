@@ -1,7 +1,7 @@
 package br.com.example.kotlin_architecture_nav.ui.base
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.support.v7.app.AppCompatActivity
 import androidx.navigation.Navigation
 
 abstract class BaseActivy : AppCompatActivity() {
