@@ -28,7 +28,7 @@ class NetworkModule {
     @Provides
     @ApplicationScope
     internal fun getApiInterface(retroFit: Retrofit): ServiceApi {
-        return retroFit.create(ServiceApi::class.java!!)
+        return retroFit.create(ServiceApi::class.java)
     }
 
     @Provides

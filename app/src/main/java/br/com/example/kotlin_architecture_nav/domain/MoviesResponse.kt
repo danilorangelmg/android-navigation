@@ -23,8 +23,7 @@ data class MoviesResponse(
             parcel.readInt(),
             parcel.readInt(),
             parcel.readInt(),
-            parcel.createTypedArrayList(Movie.CREATOR)) {
-    }
+            parcel.createTypedArrayList(Movie.CREATOR))
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(page)

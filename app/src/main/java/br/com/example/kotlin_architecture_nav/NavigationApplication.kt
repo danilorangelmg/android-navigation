@@ -2,6 +2,8 @@ package br.com.example.kotlin_architecture_nav
 
 import android.app.Application
 import br.com.example.kotlin_architecture_nav.di.component.AppComponent
+import br.com.example.kotlin_architecture_nav.di.component.DaggerAppComponent
+import br.com.example.kotlin_architecture_nav.di.module.AppModule
 
 
 /**
@@ -9,11 +11,11 @@ import br.com.example.kotlin_architecture_nav.di.component.AppComponent
  */
 class NavigationApplication: Application() {
 
-    lateinit var component: AppComponent;
+    lateinit var component: AppComponent
 
     override fun onCreate() {
         super.onCreate()
-//        component = DaggerAppComponent.builder().appModule(AppModule(this)).build()
+        component = DaggerAppComponent.builder().appModule(AppModule(this)).build()
     }
 
 
